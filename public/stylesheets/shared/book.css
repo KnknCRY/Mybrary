@@ -11,6 +11,7 @@
 
 .book-cover-large {
   width: var(--book-cover-width-large);
+  height: calc(var(--book-cover-width-large)/var(--book-cover-aspect-ration));
 }
 
 .book-grid {
