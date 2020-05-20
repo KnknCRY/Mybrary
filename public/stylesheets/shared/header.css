@@ -25,6 +25,10 @@
   padding: 0;
 }
 
+.header-nav button {
+  display: flex;
+}
+
 .header-nav li {
   list-style: none;
 }

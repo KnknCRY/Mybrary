@@ -39,6 +39,12 @@
   background-color: var(--color-btn-primary-background);
 }
 
+.btn-logout {
+  font-size: 10px;
+  border-radius: .2rem;
+  padding: .1rem;
+}
+
 .btn-primary:hover {
   color: var(--color-btn-primary-text-dark);
   background-color: var(--color-btn-primary-background-dark);

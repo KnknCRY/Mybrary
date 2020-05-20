@@ -49,10 +49,6 @@ initializePassport(
 );
 const users = [];
 
-// app.get('/', checkAuthenticated, (req, res) => {
-//   res.send('hi');
-// });
-
 app.get('/login', checkNotAuthenticated, (req, res) => {
   res.render('login');
 });
@@ -87,13 +83,6 @@ app.delete('/logout', (req, res) => {
   res.redirect('/login');
 })
 
-// function checkAuthenticated(req, res, next) {
-//   if (req.isAuthenticated()){
-//     return next();
-//   }
-//   res.redirect('/login');
-// }
-
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()){
     return res.redirect('/');
@@ -101,11 +90,8 @@ function checkNotAuthenticated(req, res, next) {
   next();
 }
 
-
 app.use("/", indexRouter);
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);
 
 app.listen(process.env.PORT || 3000);
-
-//module.exports = checkAuthenticated;
